@@ -1,0 +1,237 @@
+:root {
+  --color-gray-001: #e4e4d1;
+  --color-gray-002: #cacaba;
+  --color-blue-001: #51a8ff;
+  --color-yellow-001: #ffcd50;
+
+  --color-page-background: #030314;
+
+  --color-button-background: #0d5f3f;
+  --color-button-border: #10744e;
+  --color-button-text: #e4e4d1;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-page-background);
+  height: 100%;
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.page-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 40px 60px;
+  width: 700px;
+}
+
+@media only screen and (max-width: 550px) {
+  .content-container {
+    height: auto;
+    margin: 30px 20px;
+    padding: 0;
+  }
+}
+
+.page-title {
+  color: var(--color-yellow-001);
+  font-family: 'Fira Sans', serif;
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.title-body {
+  color: var(--color-gray-002);
+  font-family: 'Fira Sans', serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-top: 20px;
+}
+
+.link {
+  color: var(--color-blue-001);
+  display: inline-block;
+  text-decoration: none;
+}
+
+.link:hover {
+  opacity: 0.9;
+}
+
+.link:active {
+  opacity: 0.8;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.section-title {
+  color: var(--color-gray-001);
+  font-family: 'Fira Sans', serif;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.journey-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.journey-item {
+  color: var(--color-blue-001);
+  font-family: 'Fira Sans', serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  text-decoration: none;
+}
+
+.journey-item:hover {
+  opacity: 0.9;
+}
+
+.journey-item:active {
+  opacity: 0.8;
+}
+
+.arrow {
+  color: var(--color-gray-002);
+  font-family: 'Fira Sans', serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0px 3px;
+}
+
+.section-body {
+  color: var(--color-gray-002);
+  font-family: 'Fira Sans', serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  margin-top: 10px;
+}
+
+.scheduling-button {
+  align-items: center;
+  background-color: var(--color-button-background);
+  border-color: var(--color-button-border);
+  border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
+  color: var(--color-button-text);
+  cursor: pointer;
+  display: flex;
+  font-family: 'Fira Sans', serif;
+  font-size: 14px;
+  font-weight: 400;
+  height: 30px;
+  justify-content: center;
+  margin: 20px 0 10px 0;
+  width: 180px;
+}
+
+.scheduling-button:hover {
+  opacity: 90%;
+}
+
+.scheduling-button:active {
+  opacity: 80%;
+}
+
+/* Hide the default Google button so I can replace it. */
+#google-button {
+  height: 0;
+  visibility: hidden;
+  width: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  margin-top: 10px;
+  padding-inline-start: 30px;
+}
+
+.help-item {
+  color: var(--color-gray-002);
+  font-family: 'Fira Sans', serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.social-container {
+  display: flex;
+  gap: 8px;
+  height: auto;
+  justify-content:center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.social-icon {
+  path {
+    fill: white;
+  }
+}
+
+.social-icon:hover {
+  opacity: 0.9;
+}
+
+.social-icon:active {
+  opacity: 0.8;
+}
+
+.x {
+  border-radius: 100%;
+  background-color: var(--color-blue-001);
+
+  height: 27px;
+  padding: 6px;
+  width: 27px;
+}
+
+.github {
+  height: 39px;
+  width: 39px;
+
+  path {
+    fill: white;
+  }
+}
+
+.linkedin {
+  border-radius: 100%;
+  background-color: var(--color-blue-001);
+
+  height: 21px;
+  padding: 9px;
+  width: 21px;
+
+  path {
+    fill: white;
+  }
+}
