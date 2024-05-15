@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="icon" type="image/png" href="favicon.png" />
-    <link rel="stylesheet" href="public/css/styles.05142024.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/styles.05142024.css">
   </head>
   <body>
     <div class="page-container">
@@ -56,6 +56,15 @@
         </div>
         <div class="section-container">
           <div class="section-title">
+            Blog
+          </div>
+          <div class="section-body">
+            I occasionally write on my blog, <a class="link" href="/blog.html">Euchomai</a>, about
+            technology, history, music, and books.
+          </div>
+        </div>
+        <div class="section-container">
+          <div class="section-title">
             Fractional Work
           </div>
           <div class="section-body">
@@ -89,7 +98,7 @@
           <div class="section-body">
             Some of the things I have helped businesses with include:
           </div>
-          <ul>
+          <ul class="help-section">
             <li class="help-item">Hiring, leading, and growing your engineering team.</li>
             <li class="help-item">Designing scalable and secure cloud architectures that don't break the bank.</li>
             <li class="help-item">Defining and refining an ambitious product roadmap.</li>
@@ -111,13 +120,13 @@
         </div>
       </div>
     </div>
-  <script>
-    window.addEventListener('load', function() {
-      document.getElementById('scheduling-button').addEventListener('click', function (event) {
-        event.preventDefault();
-        document.getElementById('google-button').getElementsByTagName('button')[0].click();
-      });
-    })
-  </script>
+    <script>
+      window.addEventListener('load', function() {
+        document.getElementById('scheduling-button').addEventListener('click', function (event) {
+          event.preventDefault();
+          document.getElementById('google-button').getElementsByTagName('button')[0].click();
+        });
+      })
+    </script>
   </body>
 </html>
