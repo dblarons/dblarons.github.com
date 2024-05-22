@@ -3,7 +3,7 @@
   --color-gray-002: #cacaba;
   --color-gray-003: #89897e;
   --color-blue-001: #439ef9;
-  --color-yellow-001: #d6e647;
+  --color-yellow-001: #e6d647;
 
   --color-page-background: #020211;
 
@@ -113,6 +113,7 @@ body {
 
 .section-link {
   -webkit-mask: url(../svg/copy.svg) no-repeat center;
+  -webkit-tap-highlight-color: transparent;
   background-color: var(--color-gray-003);
   cursor: pointer;
   min-height: 18px;
@@ -123,6 +124,7 @@ body {
 
 .section-check {
   -webkit-mask: url(../svg/check.svg) no-repeat center;
+  -webkit-tap-highlight-color: transparent;
   background-color: var(--color-yellow-001);
   min-height: 18px;
   margin-left: 10px;
@@ -305,4 +307,8 @@ ul {
   path {
     fill: white;
   }
+}
+
+img {
+  border-radius: 2px;
 }
