@@ -21,8 +21,92 @@
           Euchomai
         </div>
         <div class="title-body">
-          This is the blog of Aaron Smith. You can contact me on my 
+          This is the blog of Aaron Smith. You can contact me on my
           <a class="link" href="/">home page</a>.
+        </div>
+        <div class="section-container" id="troy-circa-2024">
+          <div class="section-title-container">
+            <div class="section-title">
+              Troy, circa 2024
+            </div>
+            <div class="section-link" onclick="copyLink()"></div>
+          </div>
+          <div class="section-date">
+            June 28, 2024
+          </div>
+          <div class="section-body">
+            The ancient city of Troy, immortalized in Homer's Iliad, is located in northwestern
+            Turkey, along the Aegean to the south of Istanbul. Leading up to our visit in April, I
+            read Emily Wilson's new translation of the epic poem. Wilson chose to render Homer's
+            dactylic hexameter, which is a rhythm compatible with the original Greek, into iambic
+            pentameter, which is better suited to English and used by most of our own great poets.
+            <div class="pb"></div>
+            It is a vivid experience. Here is just one example:
+          </div>
+          <div class="section-body-quote">
+            He threw his spear at Pandarus.
+            <br/>Athena steered it beneath his eye and through his nose,
+            <br/>smashing his white teeth. Then the tireless bronze
+            <br/>cut off his tongue, right at the root—the tip
+            <br/>emerged again beneath his chin. He fell
+            <br/>out of the chariot. His dazzling armor
+            <br/>and shining weapons clattered all around him.
+            <br/>His swift-hoofed horses swerved and galloped off.
+            <br/>His life and spirit were released and lost.
+            <br/>
+            <div style="height:5px;"></div>
+            The Iliad: V 290 (Emily Wilson)
+          </div>
+          <div class="section-body">
+            More than a movie, the Iliad was dozens of hours of premium television, sung by a bard
+            who knew it by heart. Other passages cut deep in a different way:
+          </div>
+          <div class="section-body-quote">
+            No man can get away
+            <br/>from destiny, first set for us at birth,
+            <br/>however cowardly or brave he is.
+            <br/>
+            <div style="height:5px;"></div>
+            The Iliad: VI 487-489 (Emily Wilson)
+          </div>
+          <div class="section-body">
+            Standing on what remains of the citadel of ancient Troy and looking out over the plain,
+            beyond which the "swift Greek ships" would have been docked, was one of the highlights
+            of my life.
+            <div class="pb"></div>
+            I could hear Hector's wife, Andromache, pleading with him to remain with her and their
+            young son behind the "sturdy walls of Troy" instead of going out to face Agamemnon's
+            coalition; and old king Priam, watching as Hector, his beloved son, was later chased down
+            and mercilessly killed by Achilles; and Hecuba, Hector's mother, wailing on the
+            citadel's walls as her son's body is dragged through the dirt back to the Greek camp.
+            <div class="pb"></div>
+            It's a brutal work, and a reminder of the devastating cost of war. In Achilles' own
+            words:
+          </div>
+          <div class="section-body-quote">
+            If only conflict were eliminated
+            <br/>from gods and human beings! I wish anger
+            <br/>did not exist. Even the wisest people
+            <br/>are roused to rage, which trickles into you
+            <br/>sweeter than honey, and inside your body
+            <br/>it swells like smoke—just so, Lord Agamemnon
+            <br/>enraged me. But that happened in the past.
+            <br/>So let it go, though I am still upset.
+            <br/>I must control the feelings in my chest,
+            <br/>and go to look for Hector, who destroyed
+            <br/>the one I loved the most, my head, my life.
+            <br/>Thereafter, I will welcome death, whenever
+            <br/>Zeus and the other deathless gods may wish
+            <br/>to bring it.
+            <br/>
+            <div style="height:5px;"></div>
+            The Iliad: XVIII 105-118 (Emily Wilson)
+          </div>
+          <div class="section-body">
+            All this, on the plains of Troy.
+            <div class="pb"></div>
+          </div>
+          <img src="public/img/resized/troy-plains.jpg" alt="Overlooking the plains of Troy from the citadel ruins" style="width:100%;">
         </div>
         <div class="section-container" id="olympic-torch-relay-in-montpellier">
           <div class="section-title-container">
@@ -64,7 +148,7 @@
             I coded up the last two versions (this and the last one) of this site by hand. Raw html,
             css, and a few lines of javascript. Other than fonts, the only part I didn't write was
             a syntax highlighting library that I begrudgingly (yet without hesitation) included from
-            Prism.js. 
+            Prism.js.
             <div class="pb"></div>
             Practically speaking, writing the site by hand is worth it for me. In a business
             building a living, breathing piece of software, libraries and frameworks are great. For
@@ -79,7 +163,7 @@
             <div class="pb"></div>
             I was planning to commend this approach to others after finishing my redesign. At least,
             until I spent half a day reformatting the old markdown posts into html. What a waste of
-            time! 
+            time!
           </div>
           <div class="section-body-quote">
             Civilization was like a mad dash that lasted five thousand years. Progress begot more
@@ -161,7 +245,7 @@
             May 15, 2024
           </div>
           <div class="section-body">
-            Yesterday I 
+            Yesterday I
             <a class="link" href="https://github.com/dblarons/dblarons.github.com" target="_blank">pushed</a>
             a fresh coat of paint for my website and brought back my blog! Anything before this
             post is veeeery old... or rather from when I was very young... you've been warned!
@@ -234,7 +318,7 @@
         }
     }
 }</code></pre>
-          
+
           <div class="section-body">
             Sometimes, Elgoog doesn't give us all the information we need. For instance, they may
             not have the coordinates for our city, or the city we searched for may not exist at all.
@@ -296,8 +380,8 @@
     var latitude,
         longitude;
 
-    if (response !== null && response.location !== null 
-        && response.location.city !== null 
+    if (response !== null && response.location !== null
+        && response.location.city !== null
         && response.location.city.coordinates != null) {
         latitude = response.location.city.coordinates.latitude;
         longitude = response.location.city.coordinates.longitude;
@@ -324,7 +408,7 @@
           <div class="section-body">
             In Haskell, the `Maybe` type is defined as follows:
           </div>
-            
+
           <pre><code class="language-haskell">data Maybe t = Just t | Nothing</code></pre>
 
           <div class="section-body">
@@ -342,9 +426,9 @@
 <pre><code class="language-javascript">Maybe = function(value) {
   var Nothing = {};
 
-  var Just = function(value) { 
+  var Just = function(value) {
     return function() {
-      return value; 
+      return value;
     };
   };
 
@@ -370,9 +454,9 @@ typeof Maybe('foo'); // => 'function'</code></pre>
           </div>
 
 <pre><code class="language-javascript">function getCoordinates(response) {
-    if (Maybe(response) !== Nothing 
-        && Maybe(response.location) !== Nothing && 
-        Maybe(response.location.city) !== Nothing 
+    if (Maybe(response) !== Nothing
+        && Maybe(response.location) !== Nothing &&
+        Maybe(response.location.city) !== Nothing
         && Maybe(response.location.city.coordinates) != Nothing) {
         var latitude = Maybe(response.location.city.coordinates.latitude);
         var longitude = Maybe(response.location.city.coordinates.longitude);
@@ -465,7 +549,7 @@ typeof Maybe('foo'); // => 'function'</code></pre>
     bind: function(fn) { return this; }
   };
 
-  var Just = function(value) { 
+  var Just = function(value) {
     return {
       bind: function(fn) { return Maybe(fn.call(this, value)); }
     };
@@ -507,29 +591,29 @@ typeof Maybe('foo'); // => 'function'</code></pre>
 
 <pre><code class="language-javascript">Maybe = function(value) {
   var Nothing = {
-    bind: function(fn) { 
-      return this; 
+    bind: function(fn) {
+      return this;
     },
-    isNothing: function() { 
-      return true; 
+    isNothing: function() {
+      return true;
     },
-    val: function() { 
-      throw new Error("cannot call val() nothing"); 
+    val: function() {
+      throw new Error("cannot call val() nothing");
     },
     maybe: function(def, fn) {
       return def;
     }
   };
 
-  var Just = function(value) { 
+  var Just = function(value) {
     return {
-      bind: function(fn) { 
+      bind: function(fn) {
         return Maybe(fn.call(this, value));
       },
-      isNothing: function() { 
-        return false; 
+      isNothing: function() {
+        return false;
       },
-      val: function() { 
+      val: function() {
         return value;
       },
       maybe: function(def, fn) {
@@ -555,8 +639,8 @@ isNothing :: Maybe a -> Bool</code></pre>
 val :: Maybe a -> a</code></pre>
 
 <pre><code class="language-haskell">-- From the Haskell wiki: "The maybe function takes a default value,
--- a function, and a Maybe value. If the Maybe value is Nothing, 
--- the function returns the default value. Otherwise, it applies 
+-- a function, and a Maybe value. If the Maybe value is Nothing,
+-- the function returns the default value. Otherwise, it applies
 -- the function to the value inside the Just and returns the result."
 maybe :: b -> (a -> b) -> Maybe a -> b</code></pre>
 
@@ -671,7 +755,7 @@ maybe :: b -> (a -> b) -> Maybe a -> b</code></pre>
 }</code></pre>
 
           <div class="section-body">
-            There are a few problems with this code: 
+            There are a few problems with this code:
             <div class="pb"></div>
             1. It's <i>not readable</i>. Even though there's only one for-loop, only a programmer
             would understand this "jargon." Deciphering for-loops, especially when nested, can be
@@ -691,7 +775,7 @@ maybe :: b -> (a -> b) -> Maybe a -> b</code></pre>
           </div>
 
 <pre><code class="language-javascript">function updateUsers(users) {
-    // This is read as: "For each user in a new array, let 
+    // This is read as: "For each user in a new array, let
     // married be true."
     users.map(function(user) {
         user.married = true;
@@ -712,7 +796,7 @@ maybe :: b -> (a -> b) -> Maybe a -> b</code></pre>
         return user.username;
     });
 
-    console.log(usernames); // => ['johnstack','susyqueue', 
+    console.log(usernames); // => ['johnstack','susyqueue',
                             //     'marytrie', 'davidheap']
 }</code></pre>
 
@@ -847,7 +931,7 @@ function filterForUnmarried(users) {
           </div>
 
 <pre><code class="language-javascript">function sumIncome(users) {
-    // Each element of the users array is selected and 
+    // Each element of the users array is selected and
     // collapsed into the `initialValue` of 0.
     return users.reduce(function(prev, curr, index, array) {
         return prev.income + curr.income;
@@ -1202,7 +1286,7 @@ for (var i = 0; i < 10; i++) {
     var envVar = "I'm part of the environment.";
     var paramVar = "I was passed as a parameter.";
 
-    // Closure property - Anonymous functions can capture 
+    // Closure property - Anonymous functions can capture
     // their environment.
     var closure = function(param) {
         console.log(envVar); // => "I'm part of the environment."
@@ -1219,13 +1303,13 @@ for (var i = 0; i < 10; i++) {
             choice.
             <div class="pb"></div>
             But what if we decide that we want to use that lambda within a different function than
-            the one in which it was defined? 
+            the one in which it was defined?
             <div class="pb"></div>
             Here we have a <code class="language-javascript">userLogin</code> function that was
             written as a lambda and an example user object. The <code
             class="language-javascript">userLogin</code> function contains a lambda, <code
             class="language-javascript">loginStateChange</code>, that flips the state bit for a
-            user. 
+            user.
           </div>
 
 <pre><code class="language-javascript">var johnDoe = {
@@ -1233,7 +1317,7 @@ for (var i = 0; i < 10; i++) {
     loggedIn: false
 };
 
-function userLogin(user) { 
+function userLogin(user) {
     // loginStateChange is a closure – It captures the user object.
     var loginStateChange = function() {
         user.loggedIn = !user.loggedIn;
@@ -1361,7 +1445,7 @@ function userLogout(user) {
             IPO!), I was fortunate enough to work at real businesses.  Indeed, they too were start
             ups, but their founders had three tangible qualities that I as a young person did not:
             *Experience*, *Connections*, and *Funding*. If the founders I worked for were not
-            equipped in these three areas, their companies would not have succeeded. 
+            equipped in these three areas, their companies would not have succeeded.
             <div class="pb"></div>
             I can tell you right now, almost no young people have these qualities. And that's why I
             believe that you shouldn't start a company while you're young.
@@ -1407,7 +1491,7 @@ function userLogout(user) {
             Working as an <i>employee</i> in either the corporate or start up world gives you an
             opportunity to improve your hard and soft skills in an environment where you (most
             likely) won't lose your job if you trip up. The pace in a corporate environment may be
-            slower, but it can also leave time for reflection and perfection. 
+            slower, but it can also leave time for reflection and perfection.
             <div class="pb"></div>
             Most young people aren't experienced programmers, don't have the ability to sell an
             early stage product to an investor, and will frequently make rookie mistakes. Older
@@ -1557,8 +1641,8 @@ function userLogout(user) {
             Theodore Roosevelt
           </div>
           <div class="section-body">
-            Teddy isn't my favorite historical character, but in this case, he's right.  Leaving 
-            <a class="link" href="http://www.commitstrip.com/en/2014/11/25/west-side-project-story/" target="_blank">unfinished projects lying around</a> 
+            Teddy isn't my favorite historical character, but in this case, he's right.  Leaving
+            <a class="link" href="http://www.commitstrip.com/en/2014/11/25/west-side-project-story/" target="_blank">unfinished projects lying around</a>
             is accepting defeat.
             <div class="pb"></div>
             A few of my own projects that are still lying around: Sudz, the aforementioned iPhone
@@ -1567,10 +1651,10 @@ function userLogout(user) {
             disorganized; Dockerizing the VandyApps forum... you get the picture.
             <div class="pb"></div>
             And there are so many more areas outside of personal projects that I wish I had made
-            more progress on. From 
-            <a class="link" href="https://projecteuler.net/" target="_blank">Project Euler</a> 
+            more progress on. From
+            <a class="link" href="https://projecteuler.net/" target="_blank">Project Euler</a>
             to
-            <a class="link" href="http://smashthestack.org/" target="_blank">SmashTheStack</a>, 
+            <a class="link" href="http://smashthestack.org/" target="_blank">SmashTheStack</a>,
             all of these little ventures into massive time commitments give me the ghastly feeling
             that I haven't finished anything in the last year.
             <div class="pb"></div>
@@ -1634,7 +1718,7 @@ function userLogout(user) {
             amongst my friends, I am occasionally asked why I spend time, the valuable asset that it
             is, learning obscure languages. It is unlikely that I ever write Clojure in my day job,
             and if I start a company, I certainly wouldn't choose Haskell. So why, in this void of
-            practicality, have I invested the last year in these languages? 
+            practicality, have I invested the last year in these languages?
             <div class="pb"></div>
             In those conversations, and in this post, I use the concrete examples of Haskell and
             Clojure (at the risk of isolating functional programming to those two languages in the
@@ -1761,7 +1845,7 @@ function userLogout(user) {
           </div>
           <div class="section-body">
             Don't have developers sign an NDA before hearing your idea. You can read more about why
-            <a class="link" href="http://blog.jpl-consulting.com/2012/04/why-i-wont-sign-your-nda/" target="_blank">here</a>. 
+            <a class="link" href="http://blog.jpl-consulting.com/2012/04/why-i-wont-sign-your-nda/" target="_blank">here</a>.
             If you ask me to have our entire club sign NDA agreements before your visit, I will
             refuse. Please don't do that.
           </div>
@@ -1814,7 +1898,7 @@ function userLogout(user) {
           </div>
           <div class="section-body">
             One of the most powerful ways to show that you are committed to a project is to try
-            building it yourself. Check out my post about 
+            building it yourself. Check out my post about
             <a class="link" href="http://www.aaronhsmith.com/2014/05/01/aarons-guide-to-learning-python/" target="_blank">learning to code</a>
             for how to get started. Building something on your own, even if it sucks, shows
             potential partners that this isn't just an idea you had at a bar last Saturday. Doing so
@@ -1855,7 +1939,7 @@ function userLogout(user) {
             March 4, 2015
           </div>
           <div class="section-body">
-            I've got a new plan; it's the same as the 
+            I've got a new plan; it's the same as the
             <a class="link" href="https://www.youtube.com/watch?v=g_SWP3qI7Rg" target="_blank">old plan</a>.
             But it's going to work.
             <div class="pb"></div>
@@ -1909,7 +1993,7 @@ function userLogout(user) {
           <div class="section-body">
             After writing my post about the clustering problem I ran into last night, I set my
             computer and the project aside until this morning. Instead of diving into the code
-            today, I read several chapters of 
+            today, I read several chapters of
             <a class="link" href="http://www.manning.com/owen/" target="_blank">Mahout in Action</a>,
             dug through Mahout documentation, and (most importantly) kicked back to let myself
             think.  The conclusion I have come to is that classification does not fit our
@@ -1934,7 +2018,7 @@ function userLogout(user) {
             the number of rounds in a simulated game, does the simulated game data become useless?
             Second, will the computer get "stuck" choosing the same strategy repeatedly simply
             because it chose that strategy in the past, and how responsive will the computer be to
-            changes in player strategy? Third, what is the benefit of clustering the data at all? 
+            changes in player strategy? Third, what is the benefit of clustering the data at all?
             <div class="pb"></div>
             From my research today, my incorrect understanding of classification appears to be more
             similar to the "nearest neighbor" approach -- wherein a strategy is selected based on
@@ -2046,7 +2130,7 @@ function userLogout(user) {
           <div class="section-body">
             This semester, I am working on a machine learning project, currently named Attrition,
             with a few friends. Attrition is a simple game that will serve as a playground within
-            which we can learn about machine learning. 
+            which we can learn about machine learning.
             <div class="pb"></div>
             The rules of the game are as follows:
             <div class="pb"></div>
@@ -2096,7 +2180,7 @@ function userLogout(user) {
             first, we will only be measuring success by the amount of health left at the end of the
             game and whether or not the computer won. The clusters that we hope result from the
             simulations will represent winning strategies that the computer used against human
-            players that shared a similar strategy. 
+            players that shared a similar strategy.
             <div class="pb"></div>
             2. Classification (or, supervised learning): We designed our game to be played for 15-20
             rounds in a single game. Throughout the game, the computer should become a "smarter"
@@ -2140,16 +2224,16 @@ function userLogout(user) {
             the most likely end-result for AGI to be "martian" rather than "human"--i.e. it doesn't
             have to flap like a bird in order to fly. The most likely path to AGI, given the
             overarching themes within AI research, is through applied mathematics, especially
-            statistics. 
+            statistics.
             <div class="pb"></div>
             For a long time, discussions about the hypothetical end-result of AGI research did not
             interest me. I considered AGI to be an inevitability, and therefore largely ignored the
             possibility of negative consequences. This is because I was, at the time, only capable
             of imagining a human-like end-result.
             <div class="pb"></div>
-            A 
+            A
             <a class="link" href="http://www.theverge.com/2014/8/3/5965099/elon-musk-compares-artificial-intelligence-to-nukes" target="_blank">recent statement</a>
-            by Elon Musk along with some insightful comments by the podcaster 
+            by Elon Musk along with some insightful comments by the podcaster
             <a class="link" href="http://www.dancarlin.com/common-sense-home-landing-page/" target="_blank">Dan Carlin</a>
             caused me to more closely consider the dangers posed by AGI. In his most recent podcast,
             Dan Carlin posed the question: Can a dog ever have even one human insight, even if the
@@ -2174,7 +2258,7 @@ function userLogout(user) {
             that of the creation. In the case of AGI, we are toying with the unexplored idea of
             creating something that <i>far</i> surpasses our own understanding. Perhaps this is what
             makes AGI so frightening to people like Elon Musk: Even in one thousand years, we may
-            not be able to understand an insight that our creation has in one instant. 
+            not be able to understand an insight that our creation has in one instant.
           </div>
         </div>
         <div class="section-container" id="the-importance-of-mathematics-in-the-future-of-computing">
@@ -2194,7 +2278,7 @@ function userLogout(user) {
             were orthogonal to mathematics--after all, computer science is, in reality, a field of
             applied mathematics--only that the developments that combine purely mathematical fields
             like graph theory and statistics with the unrivaled computing power of the 21st century
-            are unique. 
+            are unique.
             <div class="pb"></div>
             In the same way that living matter and chemistry allow humans to make decisions, be
             creative, learn, and understand, silicon and electricity empower the computer. We may
@@ -2207,7 +2291,7 @@ function userLogout(user) {
             large, well-funded companies. Only a few years ago, starting a company that made heavy
             use of applied mathematics was impractical. Today, the landscape has changed. Open
             source machine learning libraries have made basic machine learning applications
-            available to the hobbyist, the college start-up founder, and the aspiring engineer. 
+            available to the hobbyist, the college start-up founder, and the aspiring engineer.
             <div class="pb"></div>
             Where will this trend head? While I cannot say for sure, my guess is that the prominence
             of mathematicians and mathematics in computer science will only grow. Machine learning
@@ -2223,7 +2307,7 @@ function userLogout(user) {
             The best thing a university-bound or enrolled computer science student can do is develop
             a strong background in mathematics. Computer science with a heavy dose of mathematics is
             the next ten years of computing. We may not be able to make human-intelligent computers,
-            but we can certainly create Martian-intelligent computers. 
+            but we can certainly create Martian-intelligent computers.
           </div>
         </div>
         <div class="section-container" id="tooling-v-coding-striking-a-balance">
@@ -2239,7 +2323,7 @@ function userLogout(user) {
           <div class="section-body">
             Programmers must strike a delicate balance between expertise in tooling and expertise in
             writing code. Having lots of one and not enough of the other can result in large drops
-            in efficiency. 
+            in efficiency.
           </div>
           <div class="section-subtitle">
             Learn your tools
@@ -2250,7 +2334,7 @@ function userLogout(user) {
             these students are fully capable programmers, but their lack of experience with basic
             tools of the trade makes them hopelessly inefficient. Granted, learning all of these
             tools at the same time <i>in addition</i> to struggling with advanced C++ concepts must
-            certainly be overwhelming. 
+            certainly be overwhelming.
           </div>
           <div class="section-subtitle">
             Got code?
@@ -2262,7 +2346,7 @@ function userLogout(user) {
             matter of seconds what would otherwise have taken hours to find. My programming skills,
             however, were lacking.
             <div class="pb"></div>
-            This summer I interned for 
+            This summer I interned for
             <a class="link" href="http://nachocove.com/" target="_blank">Nacho Cove</a>,
             a start up that is dedicated to improving corporate email on mobile. The engineers at
             Nacho Cove, many of
@@ -2276,10 +2360,10 @@ function userLogout(user) {
             along: Choose your tools wisely, stick with them, and start writing code. After my very
             first week at the company, I already felt that my programming abilities had improved
             dramatically. Spending time writing code, and a lot of it, is the only way to become a
-            better programmer. 
+            better programmer.
             <div class="pb"></div>
             This semester, my goal is to spend a little less time in my .vimrc and .tmux.conf and a
-            little more time in 
+            little more time in
             <a class="link" href="http://mitpress.mit.edu/sicp/" target="_blank">SICP</a>
             and
             <a class="link" href="http://learnyouahaskell.com/" target="_blank">Learn You a Haskell</a>.
