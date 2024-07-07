@@ -360,7 +360,7 @@ img {
 .suggestions-title {
   color: var(--color-gray-003);
   font-family: 'Fira Sans', serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -395,7 +395,7 @@ img {
   align-items: center;
   border-color: var(--color-gray-003);
   border-radius: 2px;
-  border-width: 0.75px;
+  border-width: 0.5px;
   border: solid;
   display: flex;
   flex-basis: 33%;
@@ -405,7 +405,7 @@ img {
   justify-content: center;
   line-height: 18px;
   min-height: 30px;
-  padding: 10px 10px;
+  padding: 8px 10px;
   text-align: center;
   text-decoration: none; 
 }
