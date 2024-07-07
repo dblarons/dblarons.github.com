@@ -1,0 +1,75 @@
+<!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Attrition - New Plan, Same as the Old Plan</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/public/css/styles.07052024.css">
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="content-container overflow">
+        <div id="title"></div>
+        <div class="section-container" id="plan">
+          <div class="section-title-container">
+            <div class="section-title">
+              Attrition - New Plan, Same as the Old Plan
+            </div>
+            <div class="section-link" onclick="copyLink()"></div>
+          </div>
+          <div class="section-date">
+            March 4, 2015
+          </div>
+          <div class="section-body">
+            I've got a new plan; it's the same as the old plan.  But it's going to work.
+            <div class="pb"></div>
+            First, a disclaimer: I'm not working on this project because I want to make a fun game
+            -- or a smart AI for that matter. I'm working on this project because I want to learn
+            about machine learning. If I wanted a half-decent AI for this game, I would have written
+            the recommendation/nearest neighbor system I described in my last post. But that would
+            have been simple.
+            <div class="pb"></div>
+            Today I want to take the project back to basics (and by that, I mean as complicated as
+            possible; for learning purposes, right?). I'm reintroducing classification into the
+            equation, but this time I (sort of, but not really) know what I'm doing.
+            <div class="pb"></div>
+            1. Instead of clustering all of the data collected, I'm only going to cluster data on
+            the human opponent's moves. Why? Because making calculations based on raw health and
+            unit numbers is easy, but making decisions based on the opponent's strategy is tough (if
+            not impossible).
+            <div class="pb"></div>
+            2. I am going to use 3-5 clusters. Too many clusters will make classification unwieldy.
+            These clusters will hopefully represent different strategies that a human player
+            exhibits.
+            <div class="pb"></div>
+            3. Classification will use data that is labelled as belonging to one of the 3-5 clusters
+            for training. Once trained, the algorithm's accuracy can be tested on a small amount of
+            different labelled data.
+            <div class="pb"></div>
+            4. During a game, the machine can classify its opponent as belonging to one of these
+            clusters. The opponent may be reclassified into a different cluster as the game proceeds
+            if its strategy changes.
+            <div class="pb"></div>
+            5. The computer can use its guess of the player's strategy in order to formulate attacks
+            that will do the optimal amount of damage to the player. For example, if the computer
+            expects the player to deal an offensive blow with 90% of its soldiers, the computer can
+            use 100% of its soldiers to defend, minimizing damage done.
+            <div class="pb"></div>
+            It is unlikely that this will produce a very effective AI. However, I'm very interested
+            to see if the computer can learn to distinguish human strategies (or even if real human
+            players exhibit discernible strategies at all).
+          </div>
+        </div>
+        <div id="suggestions"></div>
+      </div>
+    </div>
+    <script src="/public/js/post.js"></script>
+    <script src="/public/js/copy.js"></script>
+  </body>
+</html>

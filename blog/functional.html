@@ -1,0 +1,298 @@
+<!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Week 1: Introduction to Functional Programming in JavaScript</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <link href="/public/css/prism.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/public/css/styles.07052024.css">
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="content-container overflow">
+        <div id="title"></div>
+        <div class="section-container" id="functional">
+          <div class="section-title-container">
+            <div class="section-title">
+                Week 1: Introduction to Functional Programming in JavaScript
+            </div>
+            <div class="section-link" onclick="copyLink()"></div>
+          </div>
+          <div class="section-date">
+            August 21, 2015
+          </div>
+          <div class="section-subtitle">
+            Topics
+          </div>
+          <div class="section-body">
+            <ul>
+              <li>Using a REPL.</li>
+              <li>Welcome to JavaScript.</li>
+              <li>Anonymous functions: Lambdas, closures, lambda lifting.</li>
+            </ul>
+          </div>
+          <div class="section-subtitle">
+            Introduction
+          </div>
+          <div class="section-body">
+            This post is the first in a 12 week series of sessions that I wrote for and teach at
+            VandyApps, the programming club at Vanderbilt University. The sessions will explore
+            functional programming topics in JavaScript and Haskell.
+            <div class="pb"></div>
+            Welcome to the VandyApps Advanced Programming sessions. Let's begin.
+          </div>
+          <div class="section-subtitle">
+            Using a REPL
+          </div>
+          <div class="section-body">
+            Think back to CS 251. Did you ever wish that testing out a function or algorithm didn't
+            require your entire project to compile cleanly? Sometimes it was a total pain to
+            compile, run, and use your program, only to discover that a function or method didn't
+            work as you expected it to. Some of you may have even created a <i>new</i> project just
+            to test out that function in a clean environment that would compile cleanly.
+            <div class="pb"></div>
+            Well, fear no more. Progressive™ languages have a solution for this problem, and it's
+            called the REPL. REPL is an acronym: It stands for "Read, Evaluate, Print, Loop," and
+            that's exactly what it does. It allows you to write code, import libraries, and more
+            without compiling and executing (or interpreting) your whole project.
+            <div class="pb"></div>
+            If you've used the Python prompt in your terminal before, you've already used a REPL.
+            Likewise if you have opened up the Chrome or Firefox developer tools to use the
+            JavaScript console.
+            <div class="pb"></div>
+            Let's open up the REPL in your browser to give it a whirl. In Chrome for Mac, the REPL
+            can be accessed with the keyboard combination Cmd-Shift-C.
+          </div>
+
+<pre><code class="language-javascript">4 + 5 // => 9
+
+console.log(4 + 5) // => 9
+
+console.log("Learn. Design. Develop.") // => "Learn. Design. Develop."
+
+// Hint: Use Shift-Enter to insert a newline in the Chrome REPL.
+for (var i = 0; i < 10; i++) {
+    console.log(i); // => 0 \n 1 \n ... \n 9
+}</code></pre>
+
+          <div class="section-subtitle">
+            Welcome to JavaScript
+          </div>
+          <div class="section-body">
+            JavaScript is a prototypal, weakly and dynamically (duck) typed language.  Let's break
+            each of those words down.
+            <div class="pb"></div>
+            1. Prototypal — Most of the languages we work with in school are object oriented.
+            Haskell, which we will look at later in the seminar, is purely functional. JavaScript is
+            an oddball. It is prototypal, which means that new objects are created by cloning them
+            from other objects. However, JavaScript is multi-paradigm, in that it can also be used
+            in a functional or object oriented manner. We will focus on it's functional features in
+            these seminars.
+            <div class="pb"></div>
+            2. Weakly typed — Unlike Python and Ruby, JavaScript is weakly typed.  Strongly typed
+            languages will either not compile or throw errors when an incorrect type is passed to a
+            function. In JavaScript, type conversions happen implicitly. Sometimes this can cause
+            unexpected behavior.
+            <div class="pb"></div>
+            3. Dynamically typed — Unlike C++ and Java, when writing JavaScript you do not need to
+            declare types in your code. The "var" keyword declares a variable and that variable can
+            be reassigned to an object or primitive of a different type without throwing an error.
+            This will save us some keystrokes and help us prototype code more quickly.
+          </div>
+          <div class="section-subtitle">
+            Anonymous Functions
+          </div>
+          <div class="section-body">
+            Functions in JavaScript look like this:
+          </div>
+
+<pre><code class="language-javascript">function doSomething(param1, param2) {
+    // ...
+}</code></pre>
+          <div class="section-body">
+            We can then call that function:
+          </div>
+
+<pre><code class="language-javascript">doSomething(1, 2);</code></pre>
+
+          <div class="section-body">
+            What if we want to write a function that doesn't exist at the top level (in global scope
+            in the case of JavaScript) - i.e. a local function? We can use an anonymous function,
+            otherwise known as a lambda.
+          </div>
+
+<pre><code class="language-javascript">function doSomething(param1, param2) {
+    // We can set anonymous functions to variables.
+    var myFunc = function() {
+        var a = 1;
+        var b = 2;
+        return a + b;
+    };
+
+    // We can call that function in our code.
+    myFunc(); // => 3
+}</code></pre>
+
+          <div class="section-body">
+            In the <code class="language-javascript">doSomething</code> function, we assign an
+            anonymous function (so-called because it doesn't have a name when we define it) to the
+            <code class="language-javascript">myFunc</code> variable.  We can then call that
+            function by invoking <code class="language-javascript">myFunc</code>.
+            <div class="pb"></div>
+            Anonymous functions give us the reusable property of normal functions, but with limited
+            scope.
+          </div>
+
+<pre><code class="language-javascript">function doSomething(param1, param2) {
+    // Our anonymous functions can take parameters.
+    var paramLambda = function(a, b) {
+        return a + b;
+    };
+
+    paramLambda(1, 2); // => 3
+    paramLambda(2, 3); // => 5
+    paramLabmda(3, 4); // => 7
+}</code></pre>
+
+          <div class="section-body">
+            In fact, because they can capture their environment, lambdas can sometimes give us even
+            more power than normal functions. When a lambda captures its environment, we give it a
+            special name: Closure.
+          </div>
+
+          <div class="section-subtitle">
+            Closures
+          </div>
+
+<pre><code class="language-javascript">function doSomething() {
+    var envVar = "I'm part of the environment.";
+    var paramVar = "I was passed as a parameter.";
+
+    // Closure property - Anonymous functions can capture
+    // their environment.
+    var closure = function(param) {
+        console.log(envVar); // => "I'm part of the environment."
+        console.log(param); // => "I was passed as a parameter."
+    }
+
+    closure(paramVar);
+}</code></pre>
+
+          <div class="section-body">
+            As you can see, the closure property simplifies our anonymous function by capturing its
+            environment. That way, we don't have to pass so many parameters to our function. For a
+            lot of simple operations that need to be reused within one method, closures are the best
+            choice.
+            <div class="pb"></div>
+            But what if we decide that we want to use that lambda within a different function than
+            the one in which it was defined?
+            <div class="pb"></div>
+            Here we have a <code class="language-javascript">userLogin</code> function that was
+            written as a lambda and an example user object. The <code
+            class="language-javascript">userLogin</code> function contains a lambda, <code
+            class="language-javascript">loginStateChange</code>, that flips the state bit for a
+            user.
+          </div>
+
+<pre><code class="language-javascript">var johnDoe = {
+    id: 1,
+    loggedIn: false
+};
+
+function userLogin(user) {
+    // loginStateChange is a closure – It captures the user object.
+    var loginStateChange = function() {
+        user.loggedIn = !user.loggedIn;
+    }
+
+    console.log(user.id);
+}</code></pre>
+
+          <div class="section-body">
+            At some point, we decide that we want to write a <code
+            class="language-javascript">userLogout</code> function because our users are complaining
+            that we track them on the internet.  Unfortunately, our cookie system is tied to a user
+            login session, and we don't yet have a way to tell when to turn off our tracking
+            cookies.
+          </div>
+
+<pre><code class="language-javascript">function userLogout(user) {
+    var loginStateChange = function() {
+        user.loggedIn = !user.loggedIn;
+    }
+
+    console.log(user.id);
+}</code></pre>
+
+          <div class="section-body">
+            Hmmm... our <code class="language-javascript">userLogout</code> function contains
+            copy-pasted code from our <code class="language-javascript">userLogin</code> function.
+            Being the lazy programmers that we are, we don't want to maintain two sets of the same
+            code. Fortunately, we're in luck. We can perform a "Lambda Lift" in order to move the
+            anonymous function into the global scope.
+          </div>
+
+          <div class="section-subtitle">
+            Lambda Lifting
+          </div>
+
+          <div class="section-body">
+            Lambda lifting is when you "lift" a lambda out of the function where it resides and make
+            it a top-level definition.
+            <div class="pb"></div>
+            When you lift a lambda, you must consider whether the lambda captures its environment
+            (is a closure). If it does, you must make a parameter for every environment variable
+            that is captured (or encapsulate all of them into an object and pass that object) in the
+            new top-level definition.
+            <div class="pb"></div>
+            We'll lift the <code class="language-javascript">loginStateChange</code> closure into a
+            top-level definition that we can reuse in both the <code
+            class="language-javascript">userLogin</code> and <code
+            class="language-javascript">userLogout</code> functions.
+          </div>
+
+<pre><code class="language-javascript">// Lifted lambda.
+function loginStateChange(user) {
+    user.loggedIn = !user.loggedIn;
+}
+
+// Now, we can rewrite our two functions that make use of the lambda.
+function userLogin(user) {
+    loginStateChange(user);
+    console.log(user.id);
+}
+
+function userLogout(user) {
+    loginStateChange(user);
+    console.log(user.id);
+}</code></pre>
+
+          <div class="section-body">
+            Notice how natural the transition from lambda/closure to top-level function is. When you
+            are developing software in a language that supports anonymous functions, many of your
+            functions will begin life as helper functions that are specific to some top-level
+            definition. But as requirements grow and the operation encapsulated by the lambda
+            requires reuse, the lambda is lifted out of its environment and into the global scope.
+            <div class="pb"></div>
+            In short, lambdas, closures, and lambda lifting are all about optimizing code reuse.
+            <div class="pb"></div>
+            ---
+            <div class="pb"></div>
+            Questions? Comments? The Hacker News comments are
+            <a class="link" href="https://news.ycombinator.com/item?id=10099322" target="_blank">here</a>.
+          </div>
+        </div>
+        <div id="suggestions"></div>
+      </div>
+    </div>
+    <script src="/public/js/post.js"></script>
+    <script src="/public/js/copy.js"></script>
+    <script src="/public/js/prism.js"></script>
+  </body>
+</html>

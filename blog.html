@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Aaron's Blog</title>
+    <title>Euchomai</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,11 +12,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;800&display=swap" rel="stylesheet">
     <link href="public/css/prism.css" rel="stylesheet" />
-    <link rel="stylesheet" href="public/css/styles.06042024.css">
+    <link rel="stylesheet" href="public/css/styles.07052024.css">
   </head>
   <body>
     <div class="page-container">
-      <div class="content-container overflow">
+      <div class="content-container overflow" id="content-container">
         <div class="page-title">
           Euchomai
         </div>
@@ -24,6 +24,31 @@
           This is the blog of Aaron Smith. You can contact me on my
           <a class="link" href="/">home page</a>.
         </div>
+        <ul class="section-body post-list" id="posts">
+          <li><a class="post-link" href="/blog/telecaster.html">The Perfect Telecaster</a></li>
+          <li><a class="post-link" href="/blog/disturbance.html">No little disturbance in Ephesus</a></li>
+          <li><a class="post-link" href="/blog/troy.html">Troy, circa 2024</a></li>
+          <li><a class="post-link" href="/blog/torch.html">Olympic Torch Relay in Montpellier</a></li>
+          <li><a class="post-link" href="/blog/hand.html">Built by hand for eternity</a></li>
+          <li><a class="post-link" href="/blog/euchomai.html">Euchomai</a></li>
+          <li><a class="post-link" href="/blog/redesign.html">Website Redesign</a></li>
+          <li><a class="post-link" href="/blog/monads.html">Week 3 - Introduction to Monads in JavaScript</a></li>
+          <li><a class="post-link" href="/blog/map.html">Week 2: Map / Reduce / Filter / Zip in JavaScript</a></li>
+          <li><a class="post-link" href="/blog/functional.html">Week 1: Introduction to Functional Programming in JavaScript</a></li>
+          <li><a class="post-link" href="/blog/young.html">Why You Shouldn't be a Young Founder</a></li>
+          <li><a class="post-link" href="/blog/finishing.html">Finishing Projects is Hard</a></li>
+          <li><a class="post-link" href="/blog/languages.html">Why I Waste Time Learning Obscure Programming Languages (And Why You Should Too)</a></li>
+          <li><a class="post-link" href="/blog/attracting.html">Attracting Developers as a Non-Technical Founder</a></li>
+          <!-- Hiding (but not deleting) these because they're pretty dumb. -->
+          <!--
+          <li><a class="post-link" href="/blog/conundrum.html">Attrition - A Classification Conundrum</a></li>
+          <li><a class="post-link" href="/blog/clustering.html">Attrition - A Clustering Improvement</a></li>
+          <li><a class="post-link" href="/blog/attrition.html">Attrition - An Introduction</a></li>
+          -->
+          <li><a class="post-link" href="/blog/intelligence.html">On Artificial Intelligence</a></li>
+          <li><a class="post-link" href="/blog/mathematics.html">The Importance of Mathematics in the Future of Computing</a></li>
+          <li><a class="post-link" href="/blog/balance.html">Tooling v. Coding: Striking a Balance</a></li>
+        </ul>
         <div class="section-container" id="the-perfect-telecaster">
           <div class="section-title-container">
             <div class="section-title">
@@ -2668,29 +2693,7 @@ function userLogout(user) {
         </div>
       </div>
     </div>
-
-    <script>
-      function findAncestor(element, cls) {
-        while ((element = element.parentElement) && !element.classList.contains(cls));
-        return element;
-      }
-
-      function copyLink() {
-        const sectionContainer = findAncestor(event.target, 'section-container');
-        navigator.clipboard.writeText(window.location.origin + window.location.pathname + "#" + sectionContainer.id);
-        event.target.classList.remove('section-link');
-        event.target.classList.add('section-check');
-
-        const revert = function () {
-          this.target.classList.remove('section-check');
-          this.target.classList.add('section-link');
-        }.bind(event);
-
-        setTimeout(function () {
-            revert();
-        }, 2500);
-      }
-    </script>
-    <script src="public/js/prism.js"></script>
+    <script src="public/js/blog.js" type="module"></script>
+    <script src="public/js/copy.js"></script>
   </body>
 </html>
