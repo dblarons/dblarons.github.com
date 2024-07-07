@@ -391,11 +391,12 @@ img {
 }
 
 .suggestion {
+  -webkit-tap-highlight-color: transparent;
   align-items: center;
-  border-radius: 2px;
-  border: solid;
   border-color: var(--color-gray-003);
+  border-radius: 2px;
   border-width: 0.75px;
+  border: solid;
   display: flex;
   flex-basis: 33%;
   font-family: 'Fira Sans', serif;
