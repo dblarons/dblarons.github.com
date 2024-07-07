@@ -5,7 +5,7 @@ const title = parser.parseFromString(`
     Euchomai
   </div>
   <div class="title-body">
-    This is the blog of Aaron Smith. You can also go to my
+    This a post by Aaron Smith. You can also go to my
     <a class="link" href="/">home page</a>
     or <a class="link" href="/blog.html">blog</a>.
   </div>
