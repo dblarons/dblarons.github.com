@@ -13,6 +13,10 @@ const title = parser.parseFromString(`
 
 const suggestablePosts = [
   {
+    title: 'The Perfect Telecaster',
+    href: '/blog/telecaster.html',
+  },
+  {
     title: 'No Little Disturbance in Ephesus',
     href: '/blog/disturbance.html',
   },
